@@ -1,0 +1,503 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <title>UrOrbit CSS Developer Tool</title>
+        <script type='text/javascript' src='jquery-1.4.4.js'></script>
+        <script type='text/javascript' src='jquery.urorbit.acss.js'></script>
+
+    </head>
+    <body>
+
+
+        <div id="urorbit_roller">
+
+            <button style="cursor: pointer" id="styletypepos" onclick="if($(this).text()=='Normal style') {$(this).text('Hover style');$('#label_div').text($('#label_div').text()+':hover'); }else{ var xstr=$('#label_div').text(); $(this).text('Normal style');$('#label_div').text(xstr.replace(':hover',''))}">Normal style</button> 
+            <span style="display:none" id="label_div">theme</span>
+            <select id="all-styles" title="none">
+
+            </select>
+
+
+
+            <button id="save_css">Save Changes Style</button>
+
+
+
+
+            <div id="global-font" class="theme-group ">
+                <div class="theme-group-header  ">
+                    
+                    <a href="#">Font Settings</a>
+                </div>
+                <div class="theme-group-content" style="display: block;">
+                    <div class=" ">
+                        <label for="font-family">Family</label>
+                        <select class="urorbit_css" id="font-family">
+                            [var:"SetMoreFont"end var]
+                            <option>serif</option>
+                            <option>sans-serif</option>
+                            <option>cursive</option>
+                            <option>fantasy</option>
+                            <option>monospace</option>
+                        </select>
+                    </div>
+                    <div class=" ">
+                        <label for="font-weight">Weight</label>
+                        <select class="urorbit_css" id="font-weight">
+                            <option>normal</option>
+                            <option>bold</option>
+                            <option>600</option>
+                            <option>900</option>
+                        </select>
+                    </div>
+                    <div class=" ">
+                        <label for="font-size">Size</label>
+                        <select class="urorbit_css" id="font-size">
+                            <option value="12px">9pt</option>
+                            <option value="14px">12pt</option>
+                            <option value="16px">14pt</option>
+                            <option value="18px">16pt</option>
+                            <option value="20px">xx-small</option>
+                            <option value="22px">x-small</option>
+                            <option value="24px">small</option>
+                            <option value="26px">large</option>
+                            <option value="30px">x-large</option>
+                            <option value="32px">xx-large</option>
+                        </select>
+                    </div>
+                    <div class=" ">
+                        <label for="font-style">Style</label>
+                        <select class="urorbit_css" id="font-style">
+                            <option>normal</option>
+                            <option>italic</option>
+                            <option>oblique</option>
+                        </select>
+                    </div>
+                    <div class=" ">
+                        <label for="font-variant">Weight</label>
+                        <select class="urorbit_css" id="font-variant">
+                            <option>normal</option>
+                            <option>small-caps</option>
+                        </select>
+                    </div>
+
+                    <div class=" ">
+                        <label for="color">Color</label>
+                        <input size="8" class="hex urorbit_css" id="color" type="text">
+                    </div>
+
+
+                </div>
+            </div>
+            <div id="global-font" class="theme-group ">
+                <div class="theme-group-header  ">
+                    
+                    <a href="#">Text Settings</a>
+                </div>
+                <div class="theme-group-content" style="display: block;">
+                    <div class="">
+                        <label for="font-family">Align</label>
+                        <select class="urorbit_css" id="font-family">
+                            <option>left</option>
+                            <option>right</option>
+                            <option>center</option>
+                            <option>justify</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="vertical-align">Aertical align</label>
+                        <select class="urorbit_css" id="vertical-align">
+                            <option>baseline</option>
+                            <option>top</option>
+                            <option>middle</option>
+                            <option>bottom</option>
+                            <option>text-top</option>
+                            <option>text-bottom</option>
+                            <option>super</option>
+                            <option>sub</option>
+                            <option>3em</option>
+                            <option>30%</option>
+                        </select>
+                    </div>
+
+                    <div class="MargenTop10px ">
+                        <label for="text-decoration">Decoration</label>
+                        <select class="urorbit_css" id="text-decoration">
+                            <option>underline</option>
+                            <option>bold</option>
+                            <option>overline</option>
+                            <option>underline overline</option>
+                            <option>line-through</option>
+                            <option>blink</option>
+                        </select>
+                    </div>
+
+                    <div class="MargenTop10px ">
+                        <label for="text-indent">Indent</label>
+                        <input size="8" class="urorbit_css urorbit_counter" id="text-indent" type="text">
+                    </div>
+                    <div class="MargenTop10px ">
+                        <label for="letter-spacing">Letter spacing</label>
+                        <input size="8" class="urorbit_css urorbit_counter" id="letter-spacing" type="text">
+                    </div>
+                    <div class="MargenTop10px ">
+                        <label for="word-spacing">Word spacing</label>
+                        <input size="8" class="urorbit_css urorbit_counter" id="word-spacing" type="text">
+                    </div>
+
+
+                    <div class="MargenTop10px ">
+                        <label for="text-transform">Transform</label>
+                        <select class="urorbit_css" id="text-transform">
+                            <option>none</option>
+                            <option>capitalize</option>
+                            <option>lowercase</option>
+                            <option>uppercase</option>
+                        </select>
+                    </div>
+                    <div class="MargenTop10px ">
+                        <label for="font-style">Style</label>
+                        <select class="urorbit_css" id="font-style">
+                            <option>normal</option>
+                            <option>italic</option>
+                            <option>oblique</option>
+                        </select>
+                    </div>
+                    <div class="MargenTop10px ">
+                        <label for="font-variant">Weight</label>
+                        <select class="urorbit_css" id="font-variant">
+                            <option>normal</option>
+                            <option>small-caps</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="theme-group ">
+                <div class="theme-group-header  ">
+                    
+                    <a href="#">Background</a>
+                </div>
+                <div class="theme-group-content" style="display: block;">
+                    <div>
+                        <label for="background-color">Background color &amp; texture</label>
+                        <input size="8" class="hex urorbit_css" id="background-color" type="text"/>
+                        <input id="background-image" class="urorbit_css" type="text"/>
+                    </div>
+
+                    <div class="MargenTop10px ">
+                        <label for="background-repeat">Repeat</label>
+                        <select class="urorbit_css" id="background-repeat">
+                            <option>repeat</option>
+                            <option>no-repeat</option>
+                            <option>repeat-y</option>
+                            <option>repeat-x</option>
+                        </select>
+                    </div>
+
+                    <div class="MargenTop10px ">
+                        <label for="background-attachment">Attachment</label>
+                        <select class="urorbit_css" id="background-attachment">
+                            <option>scroll</option>
+                            <option>fixed</option>
+                        </select>
+                    </div>
+
+                    <div class="MargenTop10px ">
+                        <label for="background-position">Position</label>
+                        <select class="urorbit_css" id="background-position">
+                            <option>top</option>
+                            <option>left</option>
+                            <option>right</option>
+                            <option>bottom</option>
+                            <option>center</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theme-group ">
+                <div class="theme-group-header  ">
+                    
+                    <a href="#">Size &amp; Place</a>
+                </div>
+                <div class="theme-group-content" style="display: block;">
+                    <div>
+                        <label for="width"> Width </label>
+                        <input value="100" class="urorbit_counter urorbit_css" id="width" type="text"/>
+                    </div>
+                    <div>
+                        <label for="height"> Height </label>
+                        <input value="100" class="urorbit_counter urorbit_css" id="height" type="text"/>
+                    </div>
+                    <div>
+                        <label for="position">position</label>
+                        <select class="urorbit_css" id="position">
+                            <option>static</option>
+                            <option>relative</option>
+                            <option>absolute</option>
+                            <option>fixed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Place</label>
+                        <div>
+                            <label for="top">top </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="top" type="text"/>
+                        </div>
+                        <div>
+                            <label for="left">left </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="left" type="text"/>
+                        </div>
+                        <div>
+                            <label for="right">right </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="right" type="text"/>
+                        </div>
+                        <div>
+                            <label for="bottom">bottom </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="bottom" type="text"/>
+                        </div>
+                        <div>
+                            <label for="z-index">z-index</label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="z-index" type="text"/>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <label>Margin</label>
+                        <div>
+                            <label for="right">top </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="margin-top" type="text"/>
+                        </div>
+                        <div>
+                            <label for="right">right </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="margin-left" type="text"/>
+                        </div>
+                        <div>
+                            <label for="right">left </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="margin-right" type="text"/>
+                        </div>
+                        <div>
+                            <label for="right">bottom </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="margin-bottom" type="text"/>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Padding</label>
+                        <div>
+                            <label for="right">top </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="padding-top" type="text"/>
+                        </div>
+                        <div>
+                            <label for="right">left </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="padding-left" type="text"/>
+                        </div>
+                        <div>
+                            <label for="right">right </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="padding-right" type="text"/>
+                        </div>
+                        <div>
+                            <label for="right">bottom </label>
+                            <input value="1" class="urorbit_counter urorbit_css" id="padding-bottom" type="text"/>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Float </label>
+                        <select class="urorbit_css" id="float">
+                            <option>left</option>
+                            <option>right</option>
+                            <option>none</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>clear </label>
+
+                        <select class="urorbit_css" id="clear">
+                            <option>left</option>
+                            <option>right</option>
+                            <option>both</option>
+                            <option>none</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theme-group ">
+                <div class="theme-group-header  ">
+                    
+                    <a href="#">Border</a>
+                </div>
+                <div class="theme-group-content" style="display: block;">
+                    <div>
+                        <label for="border-top-color">Border top color &amp; style</label>
+                        <input size="8" value="#" class="hex urorbit_css" id="border-top-color" type="text"/>
+                        <select class="urorbit_css" id="border-top-style">
+                            <option>none</option>
+                            <option>solid</option>
+                            <option>double</option>
+                            <option>groove</option>
+                            <option>ridge</option>
+                            <option>inset</option>
+                            <option>outset</option>
+                            <option>dashed</option>
+                            <option>dotted</option>
+                        </select>
+                        <input value="1" class="urorbit_counter urorbit_css" id="border-top-width" type="text"/>
+                    </div>
+                    <div>
+                        <label for="border-right-color">Border right color &amp; style</label>
+                        <input size="8" value="#" class="hex urorbit_css" id="border-right-color" type="text"/>
+                        <select class="urorbit_css" id="border-right-style">
+                            <option>none</option>
+                            <option>solid</option>
+                            <option>double</option>
+                            <option>groove</option>
+                            <option>ridge</option>
+                            <option>inset</option>
+                            <option>outset</option>
+                            <option>dashed</option>
+                            <option>dotted</option>
+                        </select>
+                        <input value="1" class="urorbit_counter urorbit_css" id="border-right-width" type="text"/>
+                    </div>
+                    <div>
+                        <label for="border-left-color">Border left color &amp; style</label>
+                        <input size="8" value="#" class="hex urorbit_css" id="border-left-color" type="text"/>
+                        <select class="urorbit_css" id="border-left-style">
+                            <option>none</option>
+                            <option>solid</option>
+                            <option>double</option>
+                            <option>groove</option>
+                            <option>ridge</option>
+                            <option>inset</option>
+                            <option>outset</option>
+                            <option>dashed</option>
+                            <option>dotted</option>
+                        </select>
+                        <input value="1" class="urorbit_counter urorbit_css" id="border-left-width" type="text"/>
+                    </div>
+                    <div>
+                        <label for="border-bottom-color">Border bottom color &amp; style</label>
+                        <input size="8" value="#" class="hex urorbit_css" id="border-bottom-color" type="text"/>
+                        <select class="urorbit_css" id="border-bottom-style">
+                            <option>none</option>
+                            <option>solid</option>
+                            <option>double</option>
+                            <option>groove</option>
+                            <option>ridge</option>
+                            <option>inset</option>
+                            <option>outset</option>
+                            <option>dashed</option>
+                            <option>dotted</option>
+                        </select>
+                        <input value="1" class="urorbit_counter urorbit_css" id="border-bottom-width" type="text"/>
+                    </div>
+                </div>
+            </div>
+
+            <div id="global-font" class="theme-group ">
+                <div class="theme-group-header  ">
+                    
+                    <a href="#">More Settings</a>
+                </div>
+                <div class="theme-group-content" style="display: block;">
+                    <div class="">
+                        <label for="font-family">Cursor</label>
+                        <select class="urorbit_css" id="cursor">
+                            <option>crosshair</option>
+                            <option>default</option>
+                            <option>pointer</option>
+                            <option>move</option>
+                            <option>text</option>
+                            <option>wait</option>
+                            <option>help</option>
+                            <option>n-resize</option>
+                            <option>s-resize</option>
+                            <option>w-resize</option>
+                            <option>e-resize</option>
+                            <option>ne-resize</option>
+                            <option>nw-resize</option>
+                            <option>se-resize</option>
+                            <option>sw-resize</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="font-family">Display</label>
+                        <select class="urorbit_css" id="display">
+                            <option>none</option>
+                            <option>block</option>
+                            <option>inline</option>
+                            <option>run-in</option>
+                            <option>compact</option>
+                            <option>list-item</option>
+                            <option>marker</option>
+                        </select>
+                    </div>
+
+                    <div class="MargenTop10px ">
+                        <label for="font-weight">Visibility</label>
+                        <select class="urorbit_css" id="visibility">
+                            <option>visible</option>
+                            <option>hidden</option>
+                        </select>
+                    </div>
+                    <div class="MargenTop10px ">
+                        <label for="font-size">Overflow</label>
+                        <select class="urorbit_css" id="overflow">
+                            <option>visible</option>
+                            <option>hidden</option>
+                            <option>scroll</option>
+                            <option>auto</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <!-- START DEMO CODE -->
+        
+        <style id="groupCSS_MM">
+
+        </style>
+        <div style="border: 1px solid #333;padding: 10px;width: 250px;height: 250px;">
+        <div id="MM" title="mmstyle">
+            <span>sssss</span>
+            <a>aaa</a>
+            <div class="rrt">rrt<p>ppp</p></div>
+        </div>
+    </div>
+        <script>$('#MM').urorbit_acss(); </script> 
+        
+        
+        <hr>
+        <pre>
+&lt;style id=&quot;groupCSS_MM&quot;&gt;
+    
+&lt;/style&gt;
+&lt;div id=&quot;MM&quot; title=&quot;mmstyle&quot;&gt;   
+    &lt;span&gt;
+        sssss
+    &lt;/span&gt;
+    &lt;a&gt;
+        aaa
+    &lt;/a&gt;
+    &lt;div class=&quot;rrt&quot;&gt;
+        rrt
+        &lt;p&gt;
+            ppp
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;$('#MM').urorbit_acss(); &lt;/script&gt; 
+        </pre>
+        <!-- END DEMO CODE -->
+        <br> <a href="http://urorbit.com/?id=124&artical=381269">Back to home page!</a>
+    </body>
+</html>
+
+
