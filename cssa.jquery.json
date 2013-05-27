@@ -1,0 +1,27 @@
+{
+    "name": "cssa",
+    "title": "jQuery CSS Advanec",
+    "description": "jQuery plugin for edit css for any element in line.",
+    "keywords": [
+        "css",
+        "element"
+    ],
+    "version": "1.0",
+    "author": {
+        "name": "bassam al-essawi",
+        "email": "urorbit@gmail.com",
+        "url": "http://urorbit.com"
+    },   
+    "licenses": [
+        {
+            "type": "GPL",
+            "url": "http://www.gnu.org/licenses/gpl.html"
+        }
+    ],
+    "homepage": "http://urorbit.com/?id=124&artical=381269",
+    "docs": "http://urorbit.com/?id=124&artical=381269",
+    "download": "http://urorbit.com/?id=124&artical=381269",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
