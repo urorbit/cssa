@@ -13,7 +13,7 @@ In admin page maybe you wont give admin to set style without write any syntax cs
             <div class="rrt">rrt<p>ppp</p></div>
         </div>
     </div>
-...........
+<script>
+        $('#MM').urorbit_acss(); 
+</script>
 
-```js
-$('#MM').urorbit_acss(); 
